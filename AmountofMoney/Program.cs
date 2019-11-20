@@ -35,6 +35,8 @@ namespace AmountofMoney
             if ((origAmount % 0.01) < origAmount)
             {
                 coins[0] = (int)(origAmount / 0.01);
+                //round off to hundredth value using ceiling method.
+                coins[0] = (int)Math.Ceiling(origAmount / 0.01);
                 remainAmount = origAmount % 0.01;
             }
 
